@@ -18,6 +18,7 @@
 }
 html {
     /* font-size: 6.25%; */
+    font-family: 'Titillium Web', sans-serif;
 }
 * {
     box-sizing: border-box;
@@ -43,19 +44,57 @@ body {
     width: 100%;
     gap: 40px;
 }
+.cards ul {
+    list-style: none;
+}
+.cards li {
+    /* list-style-image: url("../img/check.svg"); */
+    display: flex;
+    align-items: center;
+}
+.cards li::before {
+    content: "";
+    display: block;
+    width: 20px; /* ajuste de tamanho */
+    height: 20px; /* ajuste de tamanho */
+    margin-right: 8px; /* espaçamento entre o ícone e o texto */
+    background-image: url("../img/check.svg");
+}
 .card {
     background: var(--white);
+    min-height: 282px;;
     padding: 24px;
     margin: auto 24px;
     border-radius: 10px;
     border: 1px solid var(--gray-200);
 }
-#essensiols {}
-#essensiols #title {
+.initial {
+    display: block;
     color: var(--purple-200);
     font-size: 14px;
+    font-weight: 600;
     margin-bottom: 8px;
 }
+.price {
+    font-weight: 700;
+}
+.dollar {
+    font-weight: 400;
+    font-size: 18px;
+}
+.button {
+    display: flex;
+    padding: 16px;
+    border: 1px solid var(--gray-800);
+    border-radius: 4px;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--gray-800);
+    outline: none;
+    margin-bottom: 16px;
+}
+#essensiols {}
 #essensiols #top {
     display: flex;
     align-items: center;
