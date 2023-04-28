@@ -43,6 +43,7 @@ body {
     display: grid;
     width: 100%;
     gap: 40px;
+    margin: 80px 0;
 }
 .cards ul {
     list-style: none;
@@ -94,6 +95,7 @@ body {
     outline: none;
     margin-bottom: 16px;
 }
+
 #essensiols {}
 #essensiols #top {
     display: flex;
@@ -107,3 +109,14 @@ body {
 }
 #ultimate {}
 #enterprise {}
+
+section {
+    transition: transform 300ms;
+  animation: appear 400ms backwards var(--delay);
+}
+@keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }

@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
+        
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#boracodar - Desafio 15</title>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,11 +18,11 @@
 <body>
     <div id="app">
         <div class="cards">
-            <section id="essensiols" class="card">
+            <section id="essensiols" class="card" style="--delay: 200ms">
                 <span class="initial">PARA VOCÊ COMERÇAR</span>
                 <div>
                     <div id="top">
-                        <H2>Essentials</H2><span class="price"><span class="dollar">R$</span> 19,97/mês</span>
+                        <H2 class="font-bold">Essentials</H2><span class="price"><span class="dollar">R$</span> 19,97/mês</span>
                     </div>
                     <a href="#" class="button">Assinar agora</a>
                     <hr>
@@ -34,8 +37,8 @@
                     <!-- <p><i></i>Até 3 usuários</p> -->
                 </div>
             </section>
-            <section id="ultimate" class="card"></section>
-            <section id="enterprise" class="card"></section>
+            <section id="ultimate" class="card" style="--delay: 350ms"></section>
+            <section id="enterprise" class="card" style="--delay: 500ms"></section>
         </div>
     </div>
 </body>
