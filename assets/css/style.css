@@ -16,10 +16,12 @@
     --orange: rgb(251, 169, 76);
     --white: #fff;
 }
+
 html {
     /* font-size: 6.25%; */
     font-family: 'Titillium Web', sans-serif;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -33,56 +35,81 @@ body {
     justify-content: center;
     align-items: center; */
 }
+
 #app {
     background: var(--gray-100);
     min-height: 100vh;
     display: grid;
     align-items: center;
 }
+
 .cards {
     display: grid;
     width: 100%;
     gap: 40px;
     margin: 80px 0;
 }
-.cards ul {
-    list-style: none;
-}
-.cards li {
-    /* list-style-image: url("../img/check.svg"); */
-    display: flex;
-    align-items: center;
-}
-.cards li::before {
-    content: "";
-    display: block;
-    width: 20px; /* ajuste de tamanho */
-    height: 20px; /* ajuste de tamanho */
-    margin-right: 8px; /* espaçamento entre o ícone e o texto */
-    background-image: url("../img/check.svg");
-}
+
 .card {
     background: var(--white);
-    min-height: 282px;;
+    min-height: 282px;
+    ;
     padding: 24px;
     margin: auto 24px;
     border-radius: 10px;
     border: 1px solid var(--gray-200);
 }
+
 .initial {
     display: block;
     color: var(--purple-200);
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 8px;
+    letter-spacing: 6%;
 }
+
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.cards ul {
+    list-style: none;
+}
+
+.cards li {
+    /* list-style-image: url("../img/check.svg"); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards li i {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-green-200);
+}
+
+.cards li span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .price {
     font-weight: 700;
 }
+
 .dollar {
     font-weight: 400;
     font-size: 18px;
 }
+
 .button {
     display: flex;
     padding: 16px;
@@ -96,27 +123,30 @@ body {
     margin-bottom: 16px;
 }
 
-#essensiols {}
-#essensiols #top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+hr {
     margin-bottom: 16px;
-    font-size: 20px;
 }
+
+#essensiols {}
+
+#essensiols #top {}
+
 #essensiols #top span {
     font-size: 18px;
 }
+
 #ultimate {}
+
 #enterprise {}
 
 section {
     transition: transform 300ms;
-  animation: appear 400ms backwards var(--delay);
+    animation: appear 400ms backwards var(--delay);
 }
+
 @keyframes appear {
     from {
-      opacity: 0;
-      transform: translateY(30px);
+        opacity: 0;
+        transform: translateY(30px);
     }
-  }
+}
