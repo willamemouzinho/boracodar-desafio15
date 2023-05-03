@@ -2,11 +2,11 @@
     --gray-50: rgb(248, 250, 252);
     --gray-100: rgb(241, 245, 249);
     --gray-200: rgb(226, 232, 240);
-    --gray-300: ;
+    --gray-300: rgba(203, 213, 225, 1);
     --gray-400: ;
-    --gray-500: ;
+    --gray-500: rgba(100, 116, 139, 1);
     --gray-600: rgb(71, 85, 105);
-    --gray-700: ;
+    --gray-700: rgba(51, 65, 85, 1);
     --gray-800: rgb(30, 41, 59);
     --gray-900: rgb(15, 23, 42);
     --green-100: rgb(4, 211, 97);
@@ -67,8 +67,6 @@ html {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 16px;
-    font-size: 20px;
-    margin-bottom: 16px;
 }
 
 .pricing-plan-title {
@@ -88,6 +86,7 @@ html {
 .pricing-plan-price span:nth-child(3) {
     font-weight: 700;
 }
+
 .button {
     display: flex;
     padding: 16px;
@@ -101,10 +100,17 @@ html {
     margin-bottom: 16px;
 }
 
+.button:hover {
+    background-color: var(--gray-100);
+}
+
 hr {
     margin-bottom: 16px;
-    border-color: var(--gray-200);
+    background-color: var(--gray-200);
+    height: 1px;
+    border: none;
 }
+
 .pricing-table ul {
     list-style: none;
     display: flex;
@@ -123,55 +129,117 @@ hr {
     font-weight: 700;
     text-align: center;
 }
+
 .ph-check {
     font-size: 20px;
     color: var(--green-200);
 }
+
 .pricing-table li span {
+    color: var(--gray-600);
     display: flex;
     align-items: center;
     letter-spacing: .06em;
     gap: 8px;
 }
+
 .ph-info {
     font-size: 16px;
-    color: var(--gray-800);
+    color: var(--gray-900);
     cursor: pointer;
 }
 
-
-
-#essensiols {}
-
-#essensiols #top {}
+/* Plano Ultimate */
+#ultimate::before {
+    content: "MAIS VANTAJOSO";
+    /* z-index: 10; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -17px;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: var(--gray-900);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    background-color: var(--orange);
+    margin: 0 auto;
+}
 
 #ultimate {
+    margin-top: 17px;
+    position: relative;
     background-color: var(--gray-900);
     color: var(--gray-50);
 }
-#ultimate .button {}
+
+#ultimate .plan {
+    border: none;
+}
+
+#ultimate .public {
+    margin-top: 16px;
+    color: var(--purple-100);
+}
+
 #ultimate .button {
     background-color: var(--purple-100);
     color: white;
+    transition: background-color 300ms;
 }
 
+#ultimate .button:hover {
+    background-color: var(--purple-200);
+}
+
+#ultimate hr {
+    background-color: var(--gray-700);
+}
+
+#ultimate .public {
+    color: var(--purple-100);
+}
+
+.pricing-table #ultimate li span {
+    color: var(--gray-300);
+}
+
+#ultimate .ph-info {
+    color: var(--gray-500);
+}
+
+/* Plano Enterprise */
 #enterprise .pricing-plan-title {
     font-size: 32px;
 }
 
+#enterprise .pricing-plan {
+    margin-bottom: 32px;
+}
+
+#enterprise .button {
+    margin-bottom: 32px;
+}
+
+#enterprise hr {
+    margin-bottom: 32px;
+}
 
 /*transition animation*/
 section .plan:hover {
     border-color: var(--color-purple-100);
-  }
-  
+}
+
 section .plan {
     transition: border 300ms;
-  }
-  
+}
+
 section:hover {
     transform: scale(1.05);
-  }
+}
 
 section {
     transition: transform 300ms;
@@ -182,5 +250,59 @@ section {
     from {
         opacity: 0;
         transform: translateY(30px);
+    }
+}
+
+/* Responsividade */
+@media screen and (min-width: 1024px) {
+
+    /* estilos para telas maiores ou iguais a 1024px de largura */
+    .container {
+        max-width: 1216px;
+        margin: 0 auto;
+    }
+
+    .pricing-table {
+        flex-direction: row;
+    }
+
+    .plan {
+        width: 384px;
+        padding: 32px;
+        /* min-height: 454px; */
+    }
+
+    #ultimate {
+        margin-top: 0;
+    }
+
+
+    .pricing-plan {
+        font-size: 20px;
+        margin-bottom: 32px;
+    }
+
+    .pricing-plan-title {
+        font-size: 32px;
+    }
+
+    .pricing-plan-price {
+        font-size: 18px;
+    }
+
+    .pricing-plan-price span:nth-child(2) {
+        font-size: 24px;
+    }
+
+    .pricing-plan-title {
+        font-size: 32px;
+    }
+    
+    .button {
+        margin-bottom: 32px;
+    }
+    
+    hr {
+        margin-bottom: 32px;
     }
 }
